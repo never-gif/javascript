@@ -1,0 +1,2500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script>
+    /*  var myname= prompt('请输入您的名字');
+     var old=prompt('请输入您的年龄');
+     var sex=prompt('请输入您的性别');
+     alert('您的名字是:'+myname+'\n您的年龄是:'+old+'\n您的性别是:'+sex);
+     console.log(parseInt(old)+10); */
+    /*  var num1 = 10;
+     var num2 = 100;
+     var res1 = num1>num2;
+     var res2 = num1 == 11;
+     var res3 = num1!=num2;
+     console.log(res3); */
+    /*  var num=10;
+     num+=2;
+     num*=4
+     num/=4
+     num-=1
+     console.log(num); */
+     /* var year=prompt('请输入年份');
+     if(year%4==0&&year%100!=0||year%400==0){
+     alert('闰年') ; 
+     }else{
+     alert('平年');
+     } */
+     /* var username=prompt('请输入您的姓名');
+     if(username=='刘德华'){
+     alert('您中奖五块');
+     }else{
+     alert('您未中奖');
+     } */
+    /*  var creat=prompt('请输入您的成绩');
+     if(creat>=90){
+      alert('A');
+     } else if(creat>=80){
+     alert('B');
+     }else if(creat>=70){
+      alert('C');
+     }else if(creat>=60){
+      alert('D');
+     }else{
+     alert('E');
+     } */
+    /*  三元表达式 */
+     /* var num=prompt('请输入一个数字'); 
+     var result=num>=10 ? '0'+num : num;
+     alert(result); */
+     //switch条件 break是中断返回
+     /* switch(2){
+      case 1:
+        console.log('1');
+        break;
+      case 2:
+        console.log('2');
+        break;  
+      default:
+        console.log('没有想要的值');
+     } */
+     /* var num=Number(prompt('请输入数字'));
+     var num1=Number(prompt('请输入数字'));
+     if(num>num1){
+      alert(num);
+     }else{
+      alert(num1);
+     } */
+    /*  var num=Number(prompt('请输入数字'));
+     num%2==0 ? alert('偶数') : alert('奇数');*/
+    //for循环1~100相加
+    /*       var sum=0;
+    for(i=1;i<=100;i++){
+      sum=sum+i //或sum+=i
+    }
+    console.log(sum); */
+    //输入班级总人数 输入成绩 求总成绩和平均数
+   /*  var num = prompt('请输入总的班级人数');
+    var sum=0;//求和的变量
+    var average=0;//求平均值的变量
+    for(var i=1;i<=num;i++){
+        var score=Number(prompt('请输入'+i+'学生成绩'));
+        sum=sum+score;            
+    } average=sum/num;
+    alert('学生的总成绩为：'+sum +'\n学生的平均成绩为:'+average)
+     */
+    //双重for循环 外层执行一次 里面执行全部
+   /*  var str='';
+    for(var i=1;i<=5;i++){
+      for(var j=1;j<=5;j++){
+       str=str+'★';
+      }
+      str=str + '\n';
+    }
+     console.log(str); */
+     //星星逐层减少一个
+     /* var str='';
+    for(var i=1;i<=5;i++){
+      for(var j=i;j<=5;j++){
+       str=str+'★';
+      }
+      str=str + '\n';
+    }
+     console.log(str); */
+     //星星逐层递增 正三角形
+    /*  var str='';
+    for(var i=1;i<=5;i++){
+      for(var j=1;j<=i;j++){
+       str=str+'★';
+      }
+      str=str + '\n';
+    }
+     console.log(str); */
+     //九九乘法表
+     /* var str=''
+     for(var i=1;i<=9;i++){
+      for(var j=1;j<=i;j++){
+      str+=j+'×'+i+'='+i*j+'\t';
+      }
+      str+='\n';
+     }
+     console.log(str); */
+    //while循环 和for循环不同的是 操作表达式在循环里面
+    /* var num=1;
+    while(num<=100){
+      console.log('Hello word');
+      num++;
+    } */
+    //do while 先循环 再判断条件
+    /* var i=1;
+    do{
+      console.log('这个人今年'+i+'岁了');
+      i++;
+    } while(i<=100) */
+    //1~100整数和
+    /* var i=1;
+    var sum=0;
+    do{
+      sum+=i;
+      i++;
+    }while(i<=100)
+    console.log(sum); */
+   /*  do{
+     var txtx= prompt('你爱我么');
+    }while(txtx!='我爱你')
+    alert('我也爱你'); */
+    //comtinue 关键字 退出本次（当前次）的循环 继续执行剩余次数的循环
+    /* for(var i=1;i<=5;i++){
+      if(i==3){
+       continue;
+      }console.log('我吃到第'+i+'个包子');
+    } */
+    //break立即跳出整个循环（循环结束）
+    /* for(var i=1;i<=5;i++){
+      if(i==3){
+       break;
+      }console.log('我吃到第'+i+'个包子');
+    } */
+    //简易atm机
+   /*  var p=100;
+    do{
+    var a = prompt('请输入您要的操作：'+'\n1.存钱'+'\n2.取钱'+'\n3.显示余额'+'\n4.退出');
+    if(a==1){
+    var cunqian=parseFloat(prompt('请输入您的存钱数'));
+    p+=cunqian;
+    alert('您现在还有'+p+'元');
+    }else if(a==2){
+      var quqian=parseFloat(prompt('请输入您的取钱数'));
+      p=p - quqian;
+      alert('您现在还有'+p+'元');
+    }else if(a==3){
+      alert('您现在还有'+p+'元');
+    }else if(a==4){
+      alert('您确定要退出么');
+    }
+  }
+  while(a!=4) */
+  //数组,arr.length是数组的长度
+  /* arr=['关羽','张飞','马超','赵云','刘备','曹操'];
+  for(i=0;i<arr.length;i++){
+    console.log(arr[i]);
+  } */
+  //数组中的最大值取法
+  /* var arr=[2,4,6,8,9];
+  var max=arr[0];
+  for(var i = 2;i<arr.length;i++){
+    if(max<arr[i]){
+     max=arr[i];
+    }
+  }console.log('数组里的最大值是'+max); */
+  //将数组中的大于等于5的元素赋值给一个新的数组
+  /* var arr=[2,1,3,6,8,9,5,4];
+  var newArr=[];
+  for(var i=0;i<arr.length;i++){
+   if(arr[i]>=5){
+    newArr[newArr.length]=arr[i];
+   }
+  } console.log(newArr);  */
+  //翻转数组给新的数组
+  /* var arr=[1,2,3,4,5];
+  var newArr=[];
+  for(var i=arr.length-1;i>=0;i--){
+     newArr[newArr.length]=arr[i]
+  }console.log(newArr); */
+  //冒泡排序
+  /* var arr=[5,4,3,2,1];
+  for(var i=0;i<=arr.length-1;i++){
+    for(var j=0;j<=arr.length-i-1;j++){
+      if(arr[j]>arr[j+1]){
+        var temp=arr[j];
+        arr[j]=arr[j+1];
+        arr[j+1]=temp;
+      }
+    }
+  }
+  console.log(arr); */
+  //函数就是封装了一段可以被重复执行调用的代码块 目的：让大量重复的代码块重新执行
+  /* function 函数名(){   //function是声明函数的关键字
+    //函数体
+  } */
+ /*  function sayhi(){
+    console.log('hi~');
+  }
+  sayhi();//函数名（）是调用函数 */
+  /* function cook(aru){//形参是接受实参的 aru='酸辣土豆丝' 形参类似一个变量
+       console.log(aru);
+  }
+  cook('酸辣土豆丝'); */
+  //利用函数求任意两个数的值 top:定义形参不能有运算
+  /* function num(num1,num2){
+    console.log(num1+num2);
+  }
+  num(1,2); */
+  //任意两个数之间的和 形参可以看做是不用声明的变量，多个形参之间用逗号隔开
+ /*  function num(num1,num2){
+    var sum=0;
+    for(var i=num1;i<=num2;i++){
+      sum+=i;
+    }console.log(sum);
+  }
+  num(1,100); */
+  //只要函数遇到return 就把后面的结果返回给函数的调用者 函数名（）=return后面的结果
+  /* function getResult(){
+    return 666;
+  }
+  getResult();
+  console.log(getResult());  */
+  /* function num(num1,num2){
+      return num1+num2;
+  }
+  console.log(num(1,2)); */
+  //利用函数求任意两个数的最大值
+ /*  function num(num1,num2){
+    if(num1>num2){
+     return num1;
+    }else {
+      return num2;
+    }
+  }
+  console.log(num(30,98)); */
+  //求数组中的最大值
+  /* function num(arr){
+    var max=arr[0];
+    for(var i=1;i<=arr.length;i++){
+      if(arr[i]>max){
+       max=arr[i]
+      }
+    }return max;
+  }
+  var u=num([23,98,43,123]);
+  console.log(u); */
+  //return 终止函数
+  /* function getSum(num1,num2){
+    return num1+num2;//return后面的代码不会被执行只能返回一个值 但是可以用数组
+    alert('我是不会被执行的哦')；
+  }
+  console.log(getSum(1,2)); */
+ /*  function getSum(num1,num2){
+    return [num1+num2,num1/num2,num1*num2];//return后面的代码不会被执行只能返回一个值 但是可以用数组
+  }
+  u=getSum(1,2);
+  console.log(u); */
+  //aeguments的使用 只有函数才有argments对象 而且是每个函数都内置好了这个arguments
+  /* function fn(){
+    console.log(arguments);//里面存储了所有传递过来的实参
+    console.log(arguments.length);
+    console.log(arguments[2]);
+  }
+  fn(1,2,3);//argumrnts是伪数组 并不是真正意义上的数组 它没有真正数组的一些方法pop（） push（）等等 */
+  //翻转数组函数调用
+  /* function num(arr){
+    var reserv=[];
+    for(var i=arr.length-1;i>=0;i--){
+       reserv[reserv.length]=arr[i];
+    }return reserv;
+  }
+  r=num([1,2,3,4,5]);
+  console.log(r); */
+  //冒泡排序函数
+ /*  function sort(arr){
+    for(var i=0;i<=arr.length-1;i++){
+      for(var j=0;j<=arr.length-i-1;j++){
+        if(arr[j]>arr[j+1]){
+          var temp=arr[j];
+          arr[j]=arr[j+1];
+          arr[j+1]=temp;
+        }
+      }
+    }return arr;
+  }
+  var p=sort([3,4,5,2,1]);
+  console.log(p); */
+  //平闰年判断函数
+ /*  function p(year){
+    var flog=false;
+    if(year/4==0&&year/400!=0||year/400==0){
+      flog=ture;
+    }return flog;
+  }
+  console.log(p(2000)); */
+  //函数是可以相互调用的 用户输入年份，输出当前年份2月份的天数
+  /* function i(){
+    var year=prompt('请您输入年份')
+    if(p(year)){
+      alert('当前年份是闰年,2月份有29天');
+    }else{
+      alert('当前年份是平年,2月份有28天')
+    }
+  }
+  i();
+  function p(year){
+    var flog=false;
+    if(year/4==0&&year/400!=0||year/400==0){
+      flog=ture;
+    }return flog;
+  } */
+  //函数的两种声明方式
+  //1.利用函数关键字自定义函数（命名函数）
+ /*  function fn(){
+
+  }
+  fn(); */
+  //2.函数表达式(匿名函数)
+  //var 变量名 = function(){};
+ /*  var fun=function(){  //fun是变量名 不是函数名
+    console.log('牛啊牛啊');
+  }
+  fun(); */ //函数表达式和声明变量差不多
+  //注意 如果在函数内部 没有声明直接赋值的变量也是全局变量
+  //注意 函数的形参也是局部变量
+  //作用域链 链式查询 类似于就近原则
+//以下代码
+/* function f1(){
+var a;
+a = b = c =9;
+//相当于var a = 9; b = 9; c = 9; b和c直接赋值没有var声明当全局变量看
+//集体声明var a = 9, b = 9, c = 9;
+console.log(a);
+console.log(b);console.log(c);
+}
+f1();
+console.log(c); 
+console.log(b);
+console.log(a); */
+  //利用对象字面量创建对象 中间属性和方法用逗号隔开
+  /* var obj={
+    uname:'张三丰',//属性
+    sex:'男',
+    age:18,
+    sayhi:function(){ //方法
+      console.log('hi');
+    }
+  }
+  console.log(obj.age);//使用属性的方法：对象名.属性名
+  console.log(obj['age']);//第二种方法：对象名['属性名']
+  obj.sayhi();//使用对象的方法的方法：对象名.方法名() */
+  //利用nwe Object创建对象
+  /* var obj=new Object();//创建一个空的对象
+  obj.uname='张三丰';
+  obj.age=18;
+  obj.sex='男';
+  obj.sayhi=function(){
+    console.log('hi');
+  }
+  obj.sayhi(); */
+  //利用构造函数创建对象
+  //构造函数的首字母要大写 构造函数不需要return就可以返回结果
+ /*  function Str(uname,age,sex){
+    this.name=uname;
+    this.age=age;
+    this.sex=sex;
+    this.sing=function(sang){
+      console.log(sang);
+    }
+  }
+  var ldh=new Str('刘德华',18,'男');//new str创建了一个ldh对象
+  console.log(ldh);
+  ldh.sing('冰雨'); */
+  //for in 遍历我们的对象
+  /* for(变量 in 对象){
+
+  } */
+  /* var obj={
+    uname:'张三丰',//属性
+    sex:'男',
+    age:18,
+    sayhi:function(){ //方法
+      console.log('hi');
+    }
+  }
+  for(k in obj){
+    console.log(k);//k 变量 输出 得到的属性名
+    console.log(obj[k]);//得到的是属性值
+  } */
+  //利用对象封装自己的数学对象
+  /* var myMath={
+    PI:3.141596,
+    max:function(){
+      var max=arguments[0];
+      for(var i = 1;i<arguments.length;i++){
+      if(arguments[i]>max){
+        max=arguments[i];
+      }
+     }return max;
+    },
+    min:function(){
+      var min=arguments[0];
+      for(var i = 1;i<arguments.length;i++){
+      if(arguments[i]<min){
+        min=arguments[i];
+      }
+     }return min;
+    }
+  }
+  console.log(myMath.max(1,2,3));
+  console.log(myMath.min(1,2,3)); */
+  //猜数字小游戏
+  /* function getRandom(min,max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+  }
+  var random=getRandom(1,10);
+  while(true){//死循环
+    var num=prompt('请输入数字：');
+    if(num<random){
+     alert('您输入的数字小了');
+    }else if(num>random){
+      alert('您输入的数字大了');
+    }else{
+      alert('您猜对了');
+      break;
+    }
+  } */
+  /* function getRandom(min,max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+  }
+  var random=getRandom(1,10);
+  //while(true){//死循环
+    for(var i=1;i<=10;i++){//只让猜10次
+    var num=prompt('请输入数字：');
+    if(num<random){
+     alert('您输入的数字小了');
+    }else if(num>random){
+      alert('您输入的数字大了');
+    }else{
+      alert('您猜对了');
+      break;
+    }
+  } */
+  //Date（）日期对象 是一个构造函数 必须使用new来调用我们的日期对象
+  /* var date=new Date();
+  console.log(date);
+  var date=new Date('2022-8-3 8:8:8');//或者2022,8,3
+  console.log(date); */
+  //今天的日期星期
+  /* var date=new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var dates = date.getDate();
+  var arr =['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+  var day = date.getDay();
+   console.log('今天是: ' + year +'年'+ month + '月'+ dates + '日 '  + arr[day]); */
+  //要求封装一个函数返回当前的时分秒 格式08:08:08
+  /* function Time(){
+    var time=new Date();
+    var h=time.getHours();
+    h=h<10 ? '0'+h : h;
+    var m=time.getMinutes();
+    m=m<10 ? '0'+m : m;
+    var s=time.getSeconds();
+    s=s<10 ? '0'+s : s;
+    console.log(h+':'+m+':'+s);
+  }
+  Time(); */
+  //获取总的毫秒数（时间戳）
+  /* var date=new Date();
+  console.log(date.valueOf());
+  var date1=+new Date();//最常用的写法
+  console.log(date1);
+  console.log(Date.now());//H5新增的方法 */
+  //倒计时器
+  /* function countDown(time){
+    var nowtimes=+new Date();
+    var inttimes=+new Date(time);
+    var times=(inttimes-nowtimes)/1000;
+    var s=parseInt(times%60);
+    s=s<10 ? '0'+s : s;
+    var m=parseInt(times/60%60);
+    m=m<10 ? '0'+m : m;
+    var h=parseInt(times/60/60%24);
+    h=h<10 ? '0'+h : h;
+    var d=parseInt(times/60/60/24);
+    d=d<10 ? '0'+d : d;
+    return d+'日'+h+'时'+m+'分'+s+'秒';
+  }
+  console.log(countDown('2022-6-20 23:30:00')); */
+  //检测是否为数组
+  /* //1.arr instanceof Array
+  var arr=[]
+  console.log(arr instanceof Array);
+  //2.Array.isArray(参数) h5新增的方法
+  console.log(Array.isArray(arr)); */
+  //push()在我们的数组的末尾 添加一个多个元素
+  //unshift()在我们的数组的头部 添加一个多个元素
+ /*  var arr=[1,2,3];
+  arr.push('h','s');
+  console.log(arr); 
+  var arr=[1,2,3];
+  arr.unshift('h','s');
+  console.log(arr);
+  //pop()删除数组最后一个元素 执行完毕后返回的是删除的那个元素
+  //shift()删除数组第一个元素 执行完毕后返回的是删除的那个元素
+  console.log(arr.pop());
+  console.log(arr); */
+  //大于2000的删除 小于的放入新数组里
+  /* var arr=[1000,1200,2000,2200,2200,3000]
+  var newArr=[];
+  for(var i=0;i<arr.length;i++){
+  if(arr[i]<=2000){
+    //newArr=arr[i]
+    newArr.push(arr[i])
+  }
+  }console.log(newArr); */
+  //数组排序
+  //1.翻转数组
+  /* var arr=[1,2,3];
+  arr.reverse();
+  console.log(arr); */
+  //2.数组排序（冒泡排序）
+  /* var arr=[5,2,3];
+  arr.sort(function(a,b){
+      return a-b;//升序的顺序排列
+      return b-a;//降序排列
+  });
+  console.log(arr); */
+  //获取数组索引号 只返回一个 如果找不到就返回-1
+  /* var arr=[1,2,3]
+  console.log(arr.indexOf(1)); //从前向后查找
+  console.log(arr.lastIndexOf(1));//从后向前查找 */
+  //封装一个把旧数组里的元素加入新数组的函数 元素不能重复
+  /* function unique(arr){
+    var newArr=[];
+     for(i=0;i<=arr.length;i++){
+      if(newArr.indexOf(arr[i])==-1){
+        newArr.push(arr[i]);
+      }
+    }return newArr;
+  }
+  console.log(unique([1,2,2,3,3])); */
+  //数组转化为字符串
+  //1.tostring()
+  /* var arr=[1,2,3];
+  console.log(arr.toString());//1,2,3用逗号隔开
+  //2.join(间隔符)
+  console.log(arr.join('★')); */
+  //字符串的不可变性 所以不要大量拼接字符串来占用内存
+  /* var str='shuaibi';
+  console.log(str);
+  str='shabei';//其实此时是内存中生成了新的空间'shabei',str指向了'shabei',而'shuaibi'这个空间还是存在的
+  console.log(str); */
+  //字符串对象 根据字符返回位置
+  /* var str='wdnmd';
+  console.log(str.indexOf('m')); */
+  //查找字符串中所有出现同一字符的位置以及次数
+  /* var str='eqweeewwqqewqe';
+  var index=str.indexOf('e');
+  var num=0;
+  while(index!=-1){
+    console.log(index);
+    num++;
+    index=str.indexOf('e',index+1);
+  }console.log(num); */
+  //根据位置返回字符
+  //1.charAt(index)
+  /* var str='ewdsadafa';
+  console.log(str.charAt(4));
+  //遍历所有字符
+  for(var i=0;i<str.length;i++){
+    console.log(str.charAt(i));
+  } */
+  //2.charCodeAt(index) 返回相应索引号的字符ASCLL值 目的：判断用户输入了哪个键
+ /*  var str='wdoaodwa'
+  console.log(str.charCodeAt(3)); */
+  //3.str[index] h5新增 不考虑兼容可用
+ /*  var str='dwadsad'
+  console.log(str[4]); */
+  //判断一个字符串'abcoefoxyozzopp'中出现次数最多的字符，并统计其次数
+ /*  var str='abcoefoxyozzopp';
+  var o={};
+  for(var i=0;i<str.length;i++){
+    var chars=str.charAt(i);
+    if(o[chars]){
+      o[chars]++
+    }else{
+      o[chars]=1
+    }
+  }console.log(o);
+  var max=0;
+  for(var k in o){
+    if(o[k]>max){
+      max=o[k];
+      var ch=k;
+    }
+  }console.log(max);
+  console.log('最多字符是：'+ch); */
+  //字符串操作方法
+  //1.concat('字符串1','字符串2'...)
+ /*  var str='date';
+  console.log(str.concat('day')); */
+  //2.substr('截取的起始位置','截取几个字符串');
+ /*  var str='改革春风吹满地';
+  console.log(str.substr(2,2)); */
+  //3.替换字符 replace('被替换的字符','替换为的字符')只会替换第一个字符
+  /* var str='abcd'
+  console.log(str.replace('b','g')); */
+  //替换字符串'aabdjaasjj'里所有j为o
+  /* var str='aabdjaasjj'
+  while(str.indexOf('j')!= -1){
+    str=str.replace('j','o');
+  }console.log(str); */
+  //4.字符转换为数组 字符串里用什么隔开分隔符就用什么隔开 结果为数组里有（多少个分隔符）个字符串  split('分隔符') 与join()转换相反
+  /* var str='1,2,3';
+  console.log(str.split(','));
+  var str='1★2★3';
+  console.log(str.split('★'));//结果还是[1,2,3] */
+  //作业
+  /* var str='dsakfhhfsakhffajajfa'
+  console.log(str.length);
+  console.log(str.charAt(3));
+  console.log(str.indexOf('l'));
+  while(str.indexOf('j')!= -1){
+    str=str.replace('j','22');
+  }console.log(str);
+  var o={};
+  for(var i=0;i<str.length;i++){
+    var chars=str.charAt(i);
+    if(o[chars]){
+      o[chars]++
+    }else{
+      o[chars]=1
+    }
+  }console.log(o);
+  var max=0;
+  for(var k in o){
+    if(o[k]>max){
+      max=o[k];
+      var ch=k;
+    }
+  }console.log(max); */
+     </script>  
+<!--  <body>
+  <div id='time'>2022-6-22</div>
+  <script>
+    //获取元素
+    var timer = document.getElementById('time');
+    console.dir(timer);
+    console.log(timer);
+  </script>
+  </body> -->
+  <!-- <body>
+    <ul>
+      <li>我是大核1</li>
+      <li>我是大核2</li>
+      <li>我是大核3</li>
+      <li>我是大核4</li>
+    </ul>
+    <ol>
+      <li>我是大核</li>
+      <li>我是大核</li>
+      <li>我是大核</li>
+      <li>我是大核</li>
+    </ol>
+    <script>
+      //获取元素对象的集合 以伪数组的形式存储的
+      var lis=document.getElementsByTagName('li')
+      console.log(lis);
+      console.log(lis[0]);
+      //遍历
+      for(var i=0;i<lis.length;i++){
+        console.log(lis[i]);
+        //elements.geiElementsByTagName('标签名')
+        var ol=document.getElementsByTagName('ol')
+        console.log(ol[0].getElementsByTagName(ol));
+      }
+    </script>
+  </body> -->
+  <!-- <body>
+    <div class='box'>盒子</div>
+    <div class='box'>盒子</div>
+    <div>
+    <ul id="nav">
+      <li>wdnmd</li>
+      <li>wdnmd</li>
+      <li>wdnmd</li>
+      <li>wdnmd</li>
+    </ul>
+  </div>
+  <script>
+    //1.getElementsByClassName根据类名获取某些元素集合
+    var boxs=document.getElementsByClassName('box');
+    console.log(boxs);
+    //2.querySelector 返回指定选择器的第一个元素对象 切记 里面的选择器需要加符号 .box#nav
+    var firstBox=document.querySelector('.box');
+    console.log(firstBox);
+    var nav=document.querySelector('#nav');
+    console.log(nav);
+    var li=document.querySelector('li');
+    console.log(li);
+    //3.querySelectorAll返回指定选择器所有元素对象集合
+    var allBox=document.querySelectorAll('.box');
+    console.log(allBox);
+    //获取body元素
+    var bodyEle=document.body;
+    console.log(bodyEle);
+    //获取html元素
+    var htmlEle=document.documentElement;
+    console.log(htmlEle);
+  </script>
+  </body>  -->
+  <!-- <body>
+    <button id="btn">wdnmd</button>
+    <button id="bt">wdnmd</button>
+    <div>时间</div>
+    <p>时间</p>
+    <script>
+      //事件触发
+      var btn=document.getElementById('btn')
+      var div=document.querySelector('div')
+      btn.onclick=function(){
+        alert('茄子')
+      }
+      /* var btn=document.getElementById('bt')
+      btn.onclick=function(){
+        div.innerText='2022-6-22'
+      } */
+      var p=document.querySelector('p')
+      var bt=document.querySelector('#bt')
+        bt.onclick=function(){
+        p.innerText=getDate();
+      }
+      function getDate(){
+        var date=new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dates = date.getDate();
+        var arr =['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var day = date.getDay();
+        return '今天是: ' + year +'年'+ month + '月'+ dates + '日 '  + arr[day];
+      }
+    </script>
+  </body> -->
+ <!--  <body>
+    <div></div>
+    <script>
+      var div=document.querySelector('div');
+      //innerHTML里能识别html标签 能识别元素属性 保留html标签
+      div.innerHTML='<strong>今天是：</strong>2022-6-22'
+    </script>
+  </body> -->
+  <!-- <body>
+    <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button>
+    <button id="zgr">张国荣</button>
+    <button id="pyy">彭于晏</button>
+    <img src="刘德华.jpg" alt="" title="四大天王">
+    <script>
+      var ldh=document.getElementById('ldh');
+      var zxy=document.getElementById('zxy');
+      var zgr=document.getElementById('zgr');
+      var pyy=document.getElementById('pyy');
+      var img=document.querySelector('img')
+      ldh.onclick=function(){
+        img.src='刘德华.jpg';
+        img.title='四大天王';
+      }
+    </script>
+  </body> -->
+<!-- <body >
+  <style>
+    .box{
+      position: relative;
+      width: 400px;
+      border: 1px solid #ccc;
+      margin:100px auto;
+    }
+    .box input{
+      width: 370px;
+      height: 30px;
+      border: 0;
+      outline: none;
+    }
+    .box img{
+     width: 10px;
+     position: absolute;
+     top: 10px;
+     right: 7px;
+    }
+  </style>
+  <div class="box">
+    <label for="">
+      <img src="刘德华.jpg" alt="" id="1">
+    </label>
+    <input type="password" name="" id="2">
+  </div>
+  <script>
+    //密码变化
+    var img=document.getElementById('1');
+    var psw=document.getElementById('2');
+    var flag=0;
+    img.onclick=function(){
+      if(flag==0){
+      psw.type='text';
+      flag=1
+      }else{
+        psw.type='password';
+        flag=0
+      }
+    }
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    div{
+      background-color: brown;
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+  <div></div>
+</body>
+<script>
+  //点击改变div
+  var div=document.querySelector('div');
+  div.onclick=function(){
+    this.style.backgroundColor='purple';
+    this.style.width='200px';
+    this.style.height='200px';
+  }
+</script> -->
+<!-- <body>
+  <style>
+    input{
+    color: #999;
+    }
+  </style>
+  <input type="text" value="手机">
+  <script>
+    //输入框失去(onblur)焦点和得到(onfocus)焦点
+    var text=document.querySelector('input');
+    text.onfocus=function(){
+      if(this.value=='手机'){
+        this.value='';
+      } this.style.color='#333'
+      }
+      text.onblur=function(){
+        if(this.value==''){
+          this.value='手机';
+        } this.style.color='#999'
+    }
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    div{
+      background-color: brown;
+      width: 100px;
+      height: 100px;
+    }
+    .change{
+      background-color:rgb(128, 88, 236);
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <div class="first"></div>
+<script>
+  //点击改变div 使用element.style获得修改元素样式 在样式比较少 或者功能简单的情况下使用
+  var div=document.querySelector('div');
+  div.onclick=function(){
+    this.style.backgroundColor='purple';
+    this.style.width='200px';
+    this.style.height='200px'; 
+    //让我们当前元素的类名改变成了'change'
+    //我们可以通过修改元素的classNme来修改样式
+    this.className='change';
+    //如果想保留原先的类名 多类名选择器
+    this.className='first change';
+  }
+</script>
+</body> -->
+<!-- <body>
+  <style>
+  div{
+    width:600px;
+    margin:100px auto;
+  }
+  .massage{
+    display:inline-block;
+    font-size: 12px;
+    color: #999;
+    background: url() no-repeat left center;
+    padding-left: 20px;
+  }
+  .wrong{
+    color: rgb(235, 25, 25);
+    background: url();
+  }
+  .right{
+    color:rgb(101, 233, 84);
+    background: url();
+  }
+</style>
+<div class="register">
+  <input type="password" class="ipt">
+  <p class="message">请输入6~16位密码</p>
+</div>
+<script>
+  var input=document.querySelector('.ipt');
+  var p=document.querySelector('.message');
+  input.onblur=function(){
+    if(this.value.length<6||this.value.length>16){
+      p.className='message wrong';
+      p.innerHTML='密码格式错误';
+    }else{
+      p.className='message right';
+      p.innerHTML='密码格式正确';
+    }
+  }
+</script>
+</body> -->
+<!-- <body>
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+  <button>5</button>
+  <script>//按钮
+    var btn=document.querySelectorAll('button');
+      for(var i=0;i<btn.length;i++){
+        btn[i].onclick=function(){
+        for(var i=0;i<btn.length;i++){
+        btn[i].style.backgroundColor='';
+        }this.style.backgroundColor='pink';
+      }
+    }
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    body {
+    font: 12px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #666;
+    background: #fff;
+    }
+    .tab_con{
+     margin: 0;
+     padding: 0;
+     height: 25px;
+     line-height: 24px;
+    }
+    .tab_list{
+      float: left;
+      height: 39px;
+      line-height: 39px;
+      padding: 0 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .tab_list .current{
+      background-color: rgb(224, 36, 36);
+      color: #fff;
+    }
+    .item_info{
+      padding: 20px 0 0 20px;
+    }
+    .item{
+      display: none;
+    }
+  </style>
+  <div class="tab">
+    <div class="tab_list">
+      <ul>
+        <li class="current">商品介绍</li>
+        <li>规格与包装</li>
+        <li>售后保障</li>
+        <li>商品评价(50000)</li>
+        <li>手机社区</li>
+      </ul>
+    </div>
+    <div class="tab_con">
+      <div class="item" style="display: block;">
+        商品介绍模块
+      </div>
+      <div class="item">
+        规格与包装内容
+      </div>
+      <div class="item">
+        售后保障模块内容
+      </div>
+      <div class="item">
+        商品评价(50000)内容
+      </div>
+      <div class="item">
+        手机社区内容
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  //TAB选项卡
+  var tab_list=document.querySelector('.tab_list');
+  var lis=document.querySelectorAll('li');
+  var items=document.querySelectorAll('.item')
+  for(var i=0;i<lis.length;i++){
+    lis[i].setAttribute('index',i)
+    lis[i].onclick=function(){
+      for(var i=0;i<lis.length;i++){
+        lis[i].className='';
+      }this.className='current';
+      var index=this.getAttribute('index');
+      for(var i=0;i<items.length;i++){
+        items[i].style.display='none'
+      }
+      items[index].style.display='block'
+    }
+  }
+</script> -->
+<!-- <body>
+  <div getTime="10" data-index="2" data-list-name="andy">1111</div>
+</body>
+<script>
+  var div=document.querySelector('div');
+  console.log(div.getAttribute('getTime'));
+  console.log(div.getAttribute('date-index'));
+  console.log(div.getAttribute('data-list-name'));
+  //h5新增的获取自定义属性的方法
+  //dataset是一个集合里面存放了所有以date开头的自定义属性 伪数组形势
+  //若有-连接的 必须使用驼峰命名法
+  console.log(div.dataset);
+  console.log(div.dataset['index']);
+  console.log(div.dataset.listName);
+  console.log(div.dataset['listName']);
+</script> -->
+<!-- <body>
+  <div class="1">
+   <div class="box">
+   <span class="erweima"></span>
+   </div>
+  </div>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+<script>
+  //1.父节点parentNode 得到的是离元素最近的父级节点 如果找不到父节点 就返回null
+  let erweima=document.querySelector('.erweima');
+  console.log(erweima.parentNode);
+  //2.子节点 所有子节点包括元素节点 文本节点等等
+  let ul=document.querySelector('ul');
+  let lis=ul.querySelectorAll('li');
+  console.log(ul.childNodes);
+  console.log(ul.childNodes[3]);
+  //parentNode.children(非标准) 实际开发常用的
+  console.log(ul.children);
+  //获得指定的子节点元素
+  //1.firstChild文本和元素节点都能获取 获取元素的是firstElementChild
+  console.log(ul.firstChild);
+  console.log(ul.firstElementChild);
+  //2.lastChild文本和元素节点都能获取 获取元素的是lastElementChild
+  console.log(ul.lastChild);
+  console.log(ul.lastElementChild);
+  //3.实际开发中不用考虑兼容性问题的方法 children[类似索引号]
+  console.log(ul.children[ul.children.length-1]);
+</script> -->
+<!-- <body>
+  <style>
+    .nav ul{
+      display: none;
+    }
+  </style>
+  <ul class="nav">
+      <li>
+        <a href="#">微博</a>
+        <ul>
+          <li><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">微博</a>
+        <ul>
+          <li><a href="">4</a></li>
+          <li><a href="">5</a></li>
+          <li><a href="">6</a></li>
+        </ul>
+      </li>
+  </ul>
+<script>
+  //下拉菜单的制作
+let nav=document.querySelector('.nav');
+let lis=nav.children;
+for(let i=0;i<lis.length;i++){
+  lis[i].onmouseover=function(){
+      this.children[i].style.display='block';
+    }
+    lis[i].onmouseout=function(){
+      this.children[i].style.display='none';
+    }
+  }
+</script>
+</body> -->
+<!-- <body>
+  <div>1</div>
+  <span>2</span>
+<script>
+  var div = document.querySelector('div');
+// 1.nextSibling 下一个兄弟节点包含元素节点或者文本节点等等
+console.log(div.previousSibling);
+console.log(div.nextSibling);
+// 2. nextElementsibling得到下一个兄弟元素节点
+console.log(div.nextElementSibling);
+console.log(div.previousElementSibling);
+</script>
+</body> -->
+<!-- <body>
+  <ul><li>123</li></ul>
+  <script>
+    let ul=document.querySelector('ul');
+    //创建节点
+   let li=document.createElement('li');
+   //添加节点 node.appendChild(child) node 父级 child是子级 追加元素 类似数组里的push
+   ul.appendChild(li);
+   //添加节点 node.inserBefore(child,指定元素) 
+   ul.insertBefore(li,ul.children[0])
+  </script>
+</body> -->
+<!-- <body>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <button>发布</button>
+  <ul></ul>
+  <script>
+  //留言板简单制作
+  let btn=document.querySelector('button');
+  let text=document.querySelector('textarea');
+  let ul=document.querySelector('ul');
+  //注册事件
+   btn.onclick=function(){
+    if(text.value==''){
+      alert('请输入内容');
+      return false;
+    }
+    if(text.value!==''){//这里else也可以
+    let li=document.createElement('li')
+    li.innerHTML=text.value;
+    ul.insertBefore(li,ul.children[0]);
+    text.value='';
+    }
+   }
+  </script>
+</body> -->
+<!-- <body>
+  <button>删除</button>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    //删除
+    //获取元素
+    let btn=document.querySelector('button');
+    let ul=document.querySelector('ul');
+    //删除元素 node.removeChild(child)
+    ul.removeChild(ul.children[0]);
+    //注册事件 点击按钮依次删除 没有元素时停止
+    btn.onclick=function(){
+      if(ul.children.length==0){
+       this.disabled=true;
+      }else{
+      ul.removeChild(ul.children[0]);
+      }
+    }
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    li a{
+      float: right;
+    }
+  </style>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <button>发布</button>
+  <ul></ul>
+  <script>
+  //留言板简单制作 加强版发布删除
+  let btn=document.querySelector('button');
+  let text=document.querySelector('textarea');
+  let ul=document.querySelector('ul');
+  //注册事件
+   btn.onclick=function(){
+    if(text.value==''){
+      alert('请输入内容');
+      return false;
+    }
+    if(text.value!==''){//这里else也可以
+    let li=document.createElement('li')
+    li.innerHTML=text.value+"<a href='javascript:;'>删除</a>";
+    ul.insertBefore(li,ul.children[0]);
+    text.value='';
+    //删除元素
+    /* let a=li.querySelector('a');
+    a.onclick=function(){
+      if(ul.children.length==0){
+       this.disabled=true;
+      }else{
+      ul.removeChild(ul.children[0]);
+      }
+    } */
+    let as=document.querySelectorAll('a');
+    for(let i=0;i<as.length;i++){
+      as[i].onclick=function(){
+        //node.removeChild(child)删除的是li 当前a所在的li this.parentNode;
+        ul.removeChild(this.parentNode);
+      }
+    }
+    }
+   }
+  </script>
+</body> -->
+ <!--  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      //克隆节点
+      let ul=document.querySelector('ul');
+      //node.cloneNode(true)括号里为空 只复制标签 （true）才是深拷贝
+      let lili=ul.children[0].cloneNode(true);
+      ul.appendChild(lili);
+    </script>
+  </body> -->
+ <!--  <body>
+    <table cellsapcing="0" frame="box" rules="all" BORDER=2>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>科目</th>
+          <th>成绩</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      //学生表
+     //先去准备好学生的数据
+     let datas=[{
+      name:'老大',
+      subject:'javascript',
+      score:100
+     },{
+      name:'老二',
+      subject:'javascript',
+      score:90
+     },{
+      name:'老三',
+      subject:'javascript',
+      score:98
+     }];
+     //往tbody里面创建行：有几个人（通过数组的长度）我们就创建几行
+     let tbody=document.querySelector('tbody');
+     for(let i=0;i<datas.length;i++){
+      //创建tr行
+      let tr=document.createElement('tr');
+      tbody.appendChild(tr);
+      //行里创建单元格 td 单元格的数量取决于每个对象属性的个数
+      for(let k in datas[i]){
+      //创建单元格
+      let td=document.createElement('td');
+      td.innerHTML=datas[i][k];
+      tr.appendChild(td);
+      }
+      //创建有删除两个字的单元格
+      let td=document.createElement('td');
+      td.innerHTML='<a href="#">删除<a>'
+      tr.appendChild(td);
+     }
+     //删除操作
+     let a=document.querySelectorAll('a');
+     for(let i=0;i<a.length;i++){
+     a[i].onclick=function(){
+      tbody.removeChild(this.parentNode.parentNode);//(td)
+     }
+    }
+    </script>
+  </body> -->
+<!--   <body>
+    <div></div>
+    <script>
+      //innerHtml数组添加元素（很快）
+      /*function fn(){
+        let d1=+new Date();
+        let arr=[];
+        for(let i=0;i<100;i++){
+          arr.push('<div style="whidth:100px;height:2pc;border:1px solid blue;"></div>');
+        }
+        document.body.innerHTML=arr.join('');
+        let d2=+new Date();
+        console.log(d2-d1);
+      }
+      fn();*/
+      //document.creatElement()创建元素 比数组创建元素稍慢
+      function fn1(){
+       d3=+new Date();
+      let div=document.querySelector('div');
+      for(let i=0;i<100;i++){
+        let a=document.createElement('a');
+        div.appendChild(a);
+      }
+      d4=+new Date();
+      console.log(d4-d3);
+    }
+    fn1()
+    </script>
+  </body> -->
+<!-- <body>
+  <button>1</button>
+  <button>2</button>
+   <script>
+    let btn=document.querySelectorAll('button');
+    //传统注册事件
+    btn[0].onclick=function(){
+      alert('牛掰');
+    }
+    btn[0].onclick=function(){
+      alert('牛掰1');
+    }
+    //事件侦听注册事件 addEventListener里面的事件类型加''而且不加on
+    //同一个元素 同一个事件可以添加多个侦听器（事件处理程序）
+    btn[1].addEventListener('click',function(){
+      alert('牛牪犇掰');
+    })
+    //attachEvent ie9以前的版本支持
+    /* btn[1].addEvent('click',function(){
+      alert('牛牪犇掰');
+    }) */
+   </script>
+   </body> -->
+   <!-- <body>
+    <style>
+      div{
+        width: 100px;
+        line-height: 100px;
+        background-color: red;
+      }
+    </style>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+      let div=document.querySelectorAll('div');
+      div[0].onclick=function(){
+        alert('1');
+        //传统方式删除事件
+        div[0].onclick=null;
+      }
+      //removeEventListener删除事件
+      div[1].addEventListener('click',fn)//里面的fn不需要加小括号
+      function fn(){
+        alert('2');
+        div[1].removeEventListener('click',fn)
+      }
+    </script>
+   </body> -->
+  <!--  <body>
+    <style>
+      div{
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <div>123</div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      let div=document.querySelector('div');
+      div.onclick=function(e){//e就是一个事件对象 当形参来看
+        console.log(e);
+      }
+      div.addEventListener('click',function(a){//e就是一个事件对象 当形参来看
+        console.log(a);
+      })
+      //常见事件对象的属性和方法
+      //1.e.target 返回的是触发事件的对象（元素） this返回的是绑定事件的对象（元素）
+      div.addEventListener('click',function(e){
+        console.log(e.target);
+        console.log(this);
+      })
+      let ul=document.querySelector('ul');
+      ul.addEventListener('click',function(e){
+        //我们给ul绑定了事件 那么this就指向了ul
+        console.log(this);
+        //e.target 指向我们点击的那个对象 谁触发了这个事件 我们
+        console.log(e.target);
+      })
+    </script>
+   </body> -->
+  <!--  <body>
+    <div>123</div>
+    <a href="http://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+      <input type="submit" value="提交" name="sub">
+    </form>
+    <script>
+    //常见事件对象的属性和方法
+    //1.返回事件类型
+    let div=document.querySelector('div');
+    div.addEventListener('click',fn);
+    function fn(e){
+      console.log(e.type);
+    }
+    //2.阻止默认行为（事件） 让链接不跳转 或让提交按钮不提交
+    let a=document.querySelector('a');
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+    })
+    //return false; 也能阻止默认行为 但必须使用传统注册方式 
+    a.onclick=function(e){
+      return false;//return后面的代码是不执行的
+    }
+    </script>
+   </body> -->
+   <!-- <script>
+    //阻止冒泡dom推荐的标准 stopPropagation()
+    e.stopPropagation();//stop停止
+   </script> -->
+   <!-- <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      //事件委托的核心原理：给父节点添加侦听器，利用事件冒泡影响每一个子节点
+      let ul=document.querySelector('ul');
+      ul.addEventListener('click',function(e){
+        alert('1');
+        for(let i=0;i<ul.children.length;i++){
+          this.children[i].style.backgroundColor='';
+        }
+        e.target.style.backgroundColor='pink';
+      })
+    </script>
+   </body> -->
+   <!-- <body>
+    <style>
+      body{
+        height: 8000px;
+      }
+    </style>
+    <script>
+      //鼠标事件对象MouseEvent
+      document.addEventListener('click',function(e){
+        //e.client是相对于浏览器可视区的
+       console.log(e.clientX);
+       console.log(e.clientY);
+       console.log('---------------------');
+       //e.page是相对于页面顶部的
+       console.log(e.pageX);
+       console.log(e.pageY);
+       console.log('---------------------');
+      //e.screen是相对于屏幕的
+       console.log(e.screenX);
+       console.log(e.screenY);
+       console.log('---------------------');
+      })
+    </script>
+   </body> -->
+<!-- <body>
+  <style>
+    img{
+      position: absolute;
+    }
+  </style>
+  <img src="刘德华.jpg" alt="" width="100px" height="100px">
+  <script>
+      //图片跟随鼠标移动
+    let img=document.querySelector('img');
+    document.addEventListener('mousemove',function(e){
+      let x=e.pageX;
+      let y=e.pageY;
+      //不要忘记给left和top添加单位
+      img.style.left=x+'px';
+      img.style.top=y+'px';
+    })
+  </script>
+</body> -->
+<!-- <body>
+  <script>
+    //常用的键盘事件
+    //1.keyup 按键弹起时触发
+    /* document.onkeyup=function(){
+      console.log('ddd');
+    } */
+    document.addEventListener('keyup',function(){
+      console.log('ddd');
+    })
+    //2.keydowm 按键按下的时候触发
+    /* document.onkeydown=function(){
+      console.log('ccc');
+    } */
+    document.addEventListener('keydown',function(){
+      console.log('ccc');
+    })
+    //3.keypress 按键按下的时候触发 不能识别功能键 如箭头 shift ctrl
+    /* document.onkeypress=function(){
+      console.log('aaa');
+    } */
+    document.addEventListener('keypress',function(){
+      console.log('aaa');
+    })
+    //三个时间的执行顺序 keydown->keypress->keyup
+    //键盘事件对象中的keyCode属性可以得到相应键的ASCII码值
+    document.addEventListener('keyup',function(e){
+      console.log(e.keyCode);
+      console.log(e);
+      //keyup和keydown不区分字母大小写 a和A得到的都是65
+      //keypress区分字母大小写
+    })
+  </script>
+</body>
+ -->
+ <!-- <body>
+  <script>
+    //我们可以利用keycode返回的AASCII码值来判断用户按下了哪个键
+    //但是key可以直接得到相应的按键 简直碾压keycode
+    document.addEventListener('keyup',function(e){
+      console.log('up:'+e.key);
+      if(e.key==65){
+        alert('您按下的a键');
+      }else{
+        alert('您没有按下a键')
+      }
+    })
+  </script>
+ </body> -->
+<!-- <body>
+  <input type="text">
+  <script>
+    let int=document.querySelector('input');
+    document.addEventListener('keyup',function(e){
+      //key会区分大小写
+      if(e.key==='s'){//或者e.code===keyS
+       int.focus();
+      };
+    })
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .search {
+            position: relative;
+            width: 178px;
+            margin: 100px;
+        }
+        
+        .con {
+            display: none;
+            position: absolute;
+            top: -40px;
+            width: 171px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+            color: #333;
+        }
+        
+        .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 28px;
+            left: 18px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+        }
+  </style>
+   <div class="search">
+    <div class="con">123</div>
+    <input type="text" placeholder="请输入您的快递单号" class="jd">
+</div>
+<script>//京东快递单号查询
+  let int=document.querySelector('input');
+  let con=document.querySelector('.con');
+  int.addEventListener('keyup',function(e){
+    if(int.value===''){
+      con.style.display='none';
+    }else{
+      con.style.display='block';
+      con.innerHTML=int.value;
+    }
+  })
+  int.addEventListener('blur',function(){//blur失去焦点
+    con.style.display='none';
+  })
+  int.addEventListener('focus',function(){//focus得到焦点
+    if(int.value!=='')
+    con.style.display='block';
+    /* //或者这样
+    if(int.value===''){
+      con.style.display='none';
+    }else{
+      con.style.display='block';
+      con.innerHTML=int.value;
+    } */
+  })
+</script>
+</body> -->
+<!-- <body>
+  <script>//DOM
+    //load加载完所有的元素才可以运行
+    window.addEventListener('load',function(){
+      let btn=document.querySelector('button');
+      btn.addEventListener('click',function(){
+        alert('点击')
+      })
+    })
+    //DOMContentLoaded加载玩标签就可以开始运行
+    window.addEventListener('DOMContentLoaded',function(){
+      alert('11')
+    })
+  </script>
+  <button>点击</button>
+</body> -->
+<!-- <body>
+  <script>//窗口大小发生变化
+    //resize窗口变化
+    //window.innerWidth当前的尺寸
+    //改变窗口大小隐藏属性
+    window.addEventListener('load',function(){
+      window.addEventListener('resize',function(){
+        let div=document.querySelector('div');
+        if(window.innerWidth<=800){
+         div.style.display='none';
+        }
+        else{
+         div.style.display='block';
+        }
+      })
+    })
+    </script>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+  <div></div>
+</body> -->
+<!-- <body>
+  <script>
+    //1.setTimeout定时器 回调函数
+    //语法规范：window.setTimeout(调用函数,延时时间)
+    //这个window在调用的时候可以省略
+    //这个延时单位是毫秒 如果省略 默认是0
+    function comeback(){
+      console.log('爆炸了');
+    }
+    setTimeout(comeback,2000);//或者('comeback()',2000) 或者直接写函数
+  </script>
+</body> -->
+<!-- <body>
+  <img src="刘德华.jpg" alt="">
+  <script>
+    //5s后隐藏图片
+    let img=document.querySelector('img')
+    setTimeout(function(){
+      img.style.display='none';
+    },5000)
+  </script>
+</body> -->
+<!-- <body>
+  <button>点击停止定时器</button>
+  <script>//停止计时器window.clearTimeout一样的可以省略window
+    //书写格式clearTimeout(定时器名(可以设置为变量));
+    let btn=document.querySelector('button');
+    let time=setTimeout(function(){
+      console.log('爆炸了');
+    },5000);
+    btn.addEventListener('click',function(){
+      clearTimeout(time);
+    })
+  </script>
+</body> -->
+<!-- <body>
+  <script>
+    //1.setInterval定时器 循环调用函数
+    //语法规范window.setInterval(调用函数,延时时间);
+    setInterval(function(){
+      console.log('啊啊啊啊啊');
+    },2000);
+    //setTimeout只调用一次
+    //setInterval循环调用
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    .hour{
+      background-color: rgb(155, 150, 150); 
+    }
+    .minute{
+      background-color: rgb(155, 150, 150); 
+    }
+    .second{
+      background-color: rgb(155, 150, 150); 
+    }
+  </style>
+  <div>
+    <span class="hour">1</span>
+    <span class="minute">2</span>
+    <span class="second">3</span>
+  </div>
+  <script>//制作倒计时器
+    //获取元素
+    let hour=document.querySelector('.hour');
+    let minute=document.querySelector('.minute');
+    let second=document.querySelector('.second');
+    var inttimes=+new Date('2022-6-29 02:30:00');
+    countDown();//我们先调用一次这个函数 防止第一次刷新页面有空白
+    //开启定时器
+    setInterval(countDown,1000)
+    function countDown(){
+    var nowtimes=+new Date();
+    var times=(inttimes-nowtimes)/1000;
+    var s=parseInt(times%60);
+    s=s<10 ? '0'+s : s;
+    second.innerHTML=s;
+    var m=parseInt(times/60%60);
+    m=m<10 ? '0'+m : m;
+    minute.innerHTML=m;
+    var h=parseInt(times/60/60%24);
+    h=h<10 ? '0'+h : h;
+    hour.innerHTML=h;
+  }
+  </script>
+</body> -->
+<!-- <body>
+  <button class="begin">开启定时器</button>
+  <button class="stop">关闭定时器</button>
+  <script>
+    let begin=document.querySelector('.begin');
+    let stop=document.querySelector('.stop');
+    timer=null;
+    begin.addEventListener('click',function(){
+      timer=setInterval(function(){
+        console.log('111');
+      },1000);
+    });
+    stop.addEventListener('click',function(){
+      clearInterval(timer);
+    });
+  </script>
+</body> -->
+<!-- <body>
+  <input type="number"><button>发送</button>
+  <script>
+    //按钮点击之后，会禁用disabled 为true
+    //同时按钮里面的内容会变化，注意 button里面的内容通过 innerHTML修改
+    //里面秒数是有变化的，因此需要用到定时器
+    //定义一个变量，在定时器里面，不断递减
+    //如果变量为0说明到了时间，我们需要停止定时器，并且复原按钮初始状态
+    let int=document.querySelector('input');
+    let btn=document.querySelector('button');
+    //time=3;
+    btn.addEventListener('click',function(){
+      let time=3;
+      btn.disabled=true;
+      let timer=setInterval(function(){
+        if(time==0){
+          clearInterval(timer);
+          btn.disabled=false;
+          btn.innerHTML='发送';
+          //time=3;//时间重新开始
+        }else{
+        btn.innerHTML='时间还剩'+time+'s';
+        time--
+        }
+      },1000);
+    })
+  </script>
+</body> -->
+<!-- <body>
+  <button>点击</button>
+  <div></div>
+  <script>//倒计时跳转页面
+    var btn=document.querySelector('button');
+    var div=document.querySelector('div');
+    var timer=2;
+    fn();
+    setInterval(fn,1000);
+    function fn(){
+      if(timer===0){
+        location.href='http://www.baidu.com';
+      }else{
+        div.innerHTML='还有'+timer+'s跳转页面';
+        timer--;
+      }
+    }
+  </script>
+</body> -->
+<!-- <body>
+  <form action="index.html">
+   用户名：<input type="text" name="uname">
+   <input type="submit" value="登录">
+  </form>
+  <script>
+  // 做一个用户输入id 跳转页面欢迎光临案例
+  </script>
+</body> -->
+<!-- <body>
+  <button>点击</button>
+  <script>
+    //点击跳转页面
+    var btn=document.querySelector('button');
+    btn.addEventListener('click',function(){
+      // 记录浏览历史 所以可以实现后退功能
+      location.assign('http://www.baidu.com')
+      //不记录浏览历史 所以不可以实现后退功能
+      //location.replace('http://www.baidu.com')
+      //强制刷新
+      // location.reload(true);
+    })
+  </script>
+</body> -->
+<!-- <body>
+  <a href="index.html">点击我去往index</a>
+  <button class="qj">前进</button>
+  <button class="ht">后退</button>
+  <script>
+    //实现前进后退功能
+    var btn=document.querySelector('.qj');
+    var btn1=document.querySelector('.ht');
+    //history.forward();
+    btn.addEventListener('click',function(){
+      history.forward();
+    });
+    //history.back();
+    btn1.addEventListener('click',function(){
+      history.back();
+    });
+    //history.go(-参数)后退几步
+    //history.go(参数)前进几步
+  </script>
+</body> -->
+<!-- <body>
+  <div class="f" style="margin:100px; width: 200px; height:200px; background-color:pink">
+  <div class="s" style="margin:20px; width: 100px; height:100px; background-color:rgb(121, 107, 158)"></div>
+  </div>
+  <script>
+    //offset系列
+    var f=document.querySelector('.f');
+    var s=document.querySelector('.s');
+    //可以得到元素的偏移 位置 返回的不带单位的数值
+    console.log(f.offsetTop);
+    console.log(f.offsetLeft);
+    //它以带有定位的父亲为准 如果没有父亲或者父亲没有定位 则以body为准
+    console.log(f.offsetLeft);
+    //可以得到元素的大小 宽度和高度 是包含padding+border+width的
+    console.log(s.offsetWidth);
+    console.log(s.offsetHeight);
+    //返回带有定位的父亲 否则返回body
+    console.log(s.offsetParent);
+    console.log(s.parentNode);//返回最近一级的父亲 不管有没有定位
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      padding: 20px;
+    }
+  </style>
+  <div class="box" style="width: 200px;"></div>
+  <script>
+    //offset和style的区别
+    //offset是只读属性 不能赋值
+    var box=document.querySelector('.box');
+    console.log(box.offsetWidth);
+    //style只能得到行内样式表的样式值
+    //style获得不包含padding和border的值
+    //style是可读写属性 可以获取也可以赋值
+    console.log(box.style.width);
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      margin: 200px;
+    }
+  </style>
+  <div class="box"></div>
+  <script>
+    var div=document.querySelector('.box');
+    div.addEventListener('mousemove',function(e){
+      //鼠标点击的坐标减去盒子的坐标就是鼠标在盒子里的相对于盒子的坐标
+      var x=e.pageX-div.offsetLeft;
+      var y=e.pageY-div.offsetTop;
+      div.innerHTML='这个鼠标在盒子的x坐标是'+x+'这个鼠标在盒子的y坐标是'+y;
+    })
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        margin: 20px;
+    }
+    .product {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border: 1px solid #000;
+    }
+    .preview_img{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .preview_img img {
+        width: 200px;
+        height: 200px;
+        margin: 25px;
+    }
+    .mask {
+        position: absolute;
+        display: none;
+        top: 220px;
+        left: 30px;
+        width: 90px;
+        height: 90px;
+        background-color: #eee;
+        border:2px solid #999;
+        box-shadow: 0 0 20px 5px ;
+        border-radius: 5px;
+        opacity: 0.3;
+        cursor: move;
+    }
+    .big {
+        position: absolute;
+        display: none;
+        left: 410px;
+        top: 0;
+        width: 300px;
+        height: 300px;
+        z-index: 999;
+        overflow: hidden;
+        border: 2px solid #999;
+    }
+    .big img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 600px;
+        height: 600px;
+    }
+</style>
+<div class="box">
+<div class="product">
+    <div class="preview_img">
+        <img src="https://profile.csdnimg.cn/B/4/9/2_chuenst" alt="" />
+        <div class="mask"></div>
+        <div class="big">
+            <img src="https://profile.csdnimg.cn/B/4/9/2_chuenst" alt="" class="bigImg" />
+        </div>
+    </div>
+</div>
+</div>
+<script>
+  //京东放大镜案例
+  var mask=document.querySelector('.mask');
+  var big=document.querySelector('.big');
+  var preview_img=document.querySelector('.preview_img');
+  preview_img.addEventListener('mouseover',function(){
+    mask.style.display='block';
+    big.style.display='block';
+  })
+  preview_img.addEventListener('mouseout',function(){
+    mask.style.display='none';
+    big.style.display='none';
+  })
+  preview_img.addEventListener('mousemove',function(e){
+    //鼠标在盒子内的坐标
+    var x=e.pageX-this.offsetLeft;
+    var y=e.pageY-this.offsetTop;
+    var maskx=x-mask.offsetWidth/1.3;
+    var masky=y-mask.offsetHeight/1.3;
+    var ix=preview_img.offsetWidth-mask.offsetWidth;
+    var iy=preview_img.offsetHeight-mask.offsetHeight;
+    if(maskx<=0){
+      maskx=0;
+    }else if(maskx>=ix){
+      maskx=ix;
+    }
+    if(masky<=0){
+      masky=0;
+    }else if(masky>=iy){
+      masky=iy;
+    }
+    mask.style.left=maskx+'px';
+    mask.style.top=masky+'px';
+    //大图片的移动距离 = 遮挡层移动距离*大图片最大移动距离 / 遮挡层的最大移动距离
+    var bigImg = document.querySelector('.bigImg');
+    //大图片最大移动距离xy
+            var bigMaxX= bigImg.offsetWidth - big.offsetWidth;
+            var bigMaxY= bigImg.offsetHeight - big.offsetHeight;
+            //大图片的移动距离 x y
+            var bigX = (maskx * bigMaxX) / ix;
+            var bigY = (masky * bigMaxY) / iy;
+            bigImg.style.left=-bigX+'px';
+            bigImg.style.top=-bigY+'px';
+  })
+</script>
+</body> -->
+<!-- <body>
+  <script>
+    //1.立即执行函数：不需要调用 立马能自己执行的函数
+    function fn(){
+     console.log(1);
+    }
+    fn();
+    //2.写法(function(){})() 或者  (function(){}())
+    //第二个小括号都可以看做调用函数 可以填写形参
+    (function(a,b){
+      console.log(b-a);
+    })(3,4);
+    (function(a,b){
+      console.log(a+b);
+    }(3,4));
+    //3.立即执行函数最大的作用 就是独立创建了一个作用域，里面的变量都是局部变量 不会有命名冲突的情况
+  </script>
+</body> -->
+<!-- <body>
+  <script>
+    //pageshow可以兼容火狐中的后退页面时已经缓存的问题
+    window.addEventListener('pageshow',function(){
+      alert('11');
+    })
+  </script>
+  <div>
+    <a href="http://www.baidu.com">链接</a>
+  </div>
+</body> -->
+<!-- <body>
+  <style>
+    div{
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      padding: 10px;
+      overflow: auto;
+      border: 10px solid red;
+    }
+  </style>
+<div>1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</div>
+<script>
+// element.scrollTop返回被卷去的上侧距离，返回数值不带单位
+// element.scrollLeft返回被卷去的左侧距离、返回数值不带单位
+// element.scrollWidth返回自身实际的宽度，不含边框，返回数值不带单位
+// element.scrollHeight返回自身实际的高度，不含边框，返回数值不带单位
+  var div=document.querySelector('div');
+  console.log(div.scrollWidth);
+  console.log(div.clientWidth);
+  //scroll滚动事件当我们滚动条发生变化时会触发的事件
+  div.addEventListener('scroll',function(){
+    console.log(div.scrollLeft);
+  })
+</script>
+</body> -->
+<!-- <body>
+  <style>
+    .header{
+      background-color: aquamarine;
+      height: 150px;
+    }
+    .banner{
+      background-color: blueviolet;
+      height: 250px;
+    }
+    .main{
+      background-color: aqua;
+      height: 1000px;
+    }
+    span{
+      display: none;
+      position: absolute;
+      bottom: 0;
+    }
+    .slider-bar{
+      position: absolute;
+      background-color: pink;
+      width: 45px;
+      height: 130px;
+      left: 50%;
+      top: 300px;
+      margin-left: 600px;
+    }
+    .w{
+      width: 1200px;
+      margin: 10px auto;
+    }
+  </style>
+  <div class="slider-bar">
+    <span class="goBack">返回顶部</span>
+  </div>
+  <div class="header w">头部区域</div>
+  <div class="banner w">banner区域</div>
+  <div class="main w">主体部分</div>
+  <script>
+    //1.获取元素
+    var sliderbar=document.querySelector('.slider-bar');
+    var span=document.querySelector('span');
+    var banner=document.querySelector('.banner');
+    var bannerTop=banner.offsetTop;
+    var sliderbarTop=sliderbar.offsetTop-bannerTop;
+    var main=document.querySelector('.main');
+    var mainTop=main.offsetTop;
+    //2.页面滚动事件scroll
+    document.addEventListener('scroll',function(){
+      //window.pageYOffset被卷去的页面头部
+      //console.log(window.pageYOffset);
+      //当我们的页面被卷去的头部大于等于172此时 侧边栏就要改为固定定位
+      if(window.pageYOffset>=bannerTop){
+        sliderbar.style.position='fixed';
+        sliderbar.style.top=sliderbarTop+'px';
+      }else{
+        sliderbar.style.position='absolute';
+        sliderbar.style.top='300px';
+      }
+      if(window.pageYOffset>=mainTop){
+        span.style.display='block';
+      }else{
+        span.style.display='none';
+      }
+      //点击了返回顶部时  让窗口返回顶部
+      span.addEventListener('click',function(){
+        //window.scroll(x,y);返回到页面某个位置 里面的xy不跟px  直接写数字即可
+        //因为是窗口抖动 所以对象是window
+        animate(window,0);
+          function animate(obj,taget,callback){
+        clearInterval(obj.timer);
+        obj.timer=setInterval(function(){
+        var step=(taget-window.pageYOffset)/10; 
+        step=step>0 ? Math.ceil(step) :Math.floor(step);
+        if(window.pageYOffset==taget){
+        clearInterval(obj.timer);
+        //回调函数写到定时器里面
+        if(callback){
+        callback();//或者callback && callback();
+  }
+      }
+          //把每次加1的值改为缓动动画公式（步长公式）：(目标值-现在的位置)/10  (taget-obj.offsetLeft)/10
+          //把步长值改为整数 不要出现小数的问题
+          // obj.style.left=obj.offsetLeft+step+'px';
+          window.scroll(0,window.pageYOffset+step)
+    },50);
+  }
+        })
+    })
+  </script>
+</body> -->
+<!-- <body>
+  <script>
+    //mouseover能够冒泡 经过自身盒子和子盒子都会触发
+    //mouseenter和mouseleave不能够冒泡 只能经过自身盒子会触发
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    div{
+      position: absolute;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+    span{
+      position: absolute;
+      left: 0;
+      top: 300px;
+      width: 200px;
+      height: 200px;
+      background-color: rgb(163, 63, 80);
+    }
+  </style>
+  <button class="btn500">夏雨荷500</button>
+  <button class="btn800">夏雨荷800</button>
+  <div></div>
+  <span>夏雨荷</span>
+  <script src="animate.js"></script>
+  <script>
+    //动画原理
+    // 1．获得盒子当前位置
+    // 2．让盒子在当前位置加上1个移动距离
+    // 3．利用定时器不断重复这个操作
+    // 4．加一个结束定时器的条件
+    // 5．注意此元素需要添加定位，才能使用element.style.left
+    //简单动画封装 obj目标对象 target 目标位置
+    //给不同的元素指定了不同的定时器
+    var div=document.querySelector('div');
+    var span=document.querySelector('span');
+    var btn500=document.querySelector('.btn500');
+    var btn800=document.querySelector('.btn800');
+animate(div,200);
+btn500.addEventListener('click',function(){
+  animate(span,500);
+})
+btn800.addEventListener('click',function(){
+  animate(span,800,function(){
+    span.style.backgroundColor='pink';
+  });
+})
+  </script>
+</body> -->
+<!-- <body>
+  <script src="animate.js"></script>
+  <style>
+    .sliderbar {
+        right: 0;
+        top: 300px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 35px;
+        background-color: pink;
+    }
+
+    .con {
+        width: 200px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        background-color: purple;
+        z-index: -1;
+    }
+</style>
+<div class="sliderbar">
+<span>←</span>
+<div class="con">问题反馈</div>
+</div>
+<script>
+  var sliderbar=document.querySelector('.sliderbar');
+  var con=document.querySelector('.con');
+  var span=document.querySelector('span');
+  sliderbar.addEventListener('mouseenter',function(){
+    animate(con,-160,function(){
+      //动画结束改变箭头
+      span.innerHTML = '→';
+    });
+  })
+  sliderbar.addEventListener('mouseleave',function(){
+    animate(con,160,function(){
+      span.innerHTML = '←';
+    });
+  })
+</script>
+</body> -->
+<!-- <body>
+  <style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    body {
+        background-color: black;
+    }
+    
+    .c-nav {
+        width: 900px;
+        height: 42px;
+        background: #fff url(img/rss.png) no-repeat right center;
+        margin: 100px auto;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .c-nav ul {
+        position: absolute;
+    }
+    
+    .c-nav li {
+        float: left;
+        width: 83px;
+        text-align: center;
+        line-height: 42px;
+    }
+    
+    .c-nav li a {
+        color: #333;
+        text-decoration: none;
+        display: inline-block;
+        height: 42px;
+    }
+    
+    .c-nav li a:hover {
+        color: rgb(88, 211, 98);
+    }
+    
+    .c-nav li.current a {
+        color: #0dff1d;
+    }
+    
+    .cloud {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 83px;
+        height: 42px;
+        background: url(img/cloud.gif) no-repeat;
+    }
+</style>
+<body>
+  <div id="c_nav" class="c-nav">
+      <span class="cloud"></span>
+      <ul>
+          <li><a href="#">首页新闻</a></li>
+          <li><a href="#">师资力量</a></li>
+          <li><a href="#">活动策划</a></li>
+          <li><a href="#">企业文化</a></li>
+          <li><a href="#">招聘信息</a></li>
+          <li><a href="#">公司简介</a></li>
+          <li><a href="#">我是佩奇</a></li>
+          <li><a href="#">啥是佩奇</a></li>
+      </ul>
+  </div>
+  <script src="js/animate.js"></script>
+  <script>
+    //1.获取元素
+   window.addEventListener('load',function(){
+    var cloud=document.querySelector('.cloud');
+    var c_nav=document.querySelector('.c-nav');
+    var lis=c_nav.querySelectorAll('li');
+    // 2.给所有的小li绑定事件
+    //这个current作为筋斗云的起始位置
+    var current=0;
+    for(var i=0;i<lis.length;i++){
+      //鼠标经过
+      lis[i].addEventListener('mouseenter',function(){
+        animate(cloud,this.offsetLeft);
+      })
+      //鼠标离开 就回到起始的位置
+      lis[i].addEventListener('mouseleave',function(){
+        animate(cloud,current);
+      })
+      lis[i].addEventListener('click',function(){
+        current=this.offsetLeft;
+      })
+    }
+   })
+  </script>
+</body> -->
+<!-- <body>
+  <div style="width:100px; height:100px; background-color:pink"></div>
+  <script>
+    //移动端
+    //1.获取元素
+    var div=document.querySelector('div');
+    //手指触摸DOM元素事件
+    div.addEventListener('touchstart',function(e){
+      console.log(e);
+      //toucher 正在触摸屏幕的所有手指的列表
+      //tarrgetTouches正在触摸当前DOM元素的手指列表
+      //如果侦听的是DOM元素 他们两个是一样的
+      //changedTouches 手指状态发生了改变的列表 从无到有 或者 从有到无
+    });
+    //手指在DOM元素上移动事件
+    div.addEventListener('touchmove',function(e){
+      console.log('我滑了一下');
+      console.log(e.tatgetToucher[0]);
+      //tatgetToucher[0]就可以得到正在触摸DOM元素的第一个手指的相关信息 比如 手指的坐标
+    });
+    //手指离开DOM元素事件 
+    div.addEventListener('touchend',function(){
+      console.log('我不摸了');
+      //当我们的手指离开的时候就没有了toucher和tarrgetTouches列表 凡是会有changedTouches列表
+    });
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    div {
+        position: absolute;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+</style>
+  <div></div>
+  <script>
+  var div = document.querySelector('div');
+        var startX = 0; //获取手指初始坐标
+        var startY = 0;
+        var x = 0; //获得盒子原来的位置
+        var y = 0;
+        div.addEventListener('touchstart', function(e) {
+            //  获取手指初始坐标
+            startX = e.targetTouches[0].pageX;
+            startY = e.targetTouches[0].pageY;
+            x = this.offsetLeft;
+            y = this.offsetTop;
+        });
+
+        div.addEventListener('touchmove', function(e) {
+            //  计算手指的移动距离： 手指移动之后的坐标减去手指初始的坐标
+            var moveX = e.targetTouches[0].pageX - startX;
+            var moveY = e.targetTouches[0].pageY - startY;
+            // 移动我们的盒子 盒子原来的位置 + 手指移动的距离
+            this.style.left = x + moveX + 'px';
+            this.style.top = y + moveY + 'px';
+            e.preventDefault(); // 阻止屏幕滚动的默认行为
+        });
+  </script>
+</body> -->
+<!-- <body>
+  <style>
+    .bg{
+      background-color: black;
+    }
+  </style>
+  <div class="one two"></div>
+  <button>开关灯</button>
+  <script>
+    //classList 返回元素的类名
+    var div=document.querySelector('.one');
+    //console.log(div.classList[0]);
+    //1.添加类名 是在后面追加类名 不是覆盖类名 注意前面不需要加.
+    div.classList.add('three');
+    //2.移除类名
+    div.classList.remove('two');
+    //3.切换类名 有就删 没有就添加
+    // div.classList.toggle('one');
+    var btn=document.querySelector('button');
+    btn.addEventListener('click',function(){
+      document.body.classList.toggle('bg');
+    })
+  </script>
+</body> -->
